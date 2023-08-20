@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col justify-around [&>a]:font-bold gap-5">
           <Link href="#home">HOME</Link>
-          <Link href="#about">ABOUT</Link>
+          <Link href="https://minertiaxyz.netlify.app/about">ABOUT</Link>
           <Link href="#contact">CONTACT</Link>
         </div>
       </div>

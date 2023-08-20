@@ -10,12 +10,12 @@ export default function Header() {
         </div>
         <ul className="flex gap-5 [&>li]:font-bold [&>li]:text-sm  items-center 2xl:[&>li]:text-base">
           <li>
-            <Link href={"#"} id="home">
+            <Link href="/" id="home">
               HOME
             </Link>
           </li>
           <li>
-            <Link href={"#"} id="about">
+            <Link href="https://minertiaxyz.netlify.app/about" id="about">
               ABOUT
             </Link>
           </li>
