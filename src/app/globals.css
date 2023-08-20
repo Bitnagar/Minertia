@@ -57,3 +57,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .red-gradient {
+    @apply [background:radial-gradient(_at_center_bottom,rgb(255,228,230),rgb(189,51,72),rgb(0,0,0)_)];
+  }
+
+  .red-text-gradient {
+    @apply bg-gradient-to-r from-rose-900 via-amber-100 to-rose-900;
+  }
+}
