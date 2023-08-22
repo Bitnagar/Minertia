@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="flex bg-background h-[20rem] text-center p-4 justify-between flex-col">
+    <footer className="flex bg-black h-[20rem] text-center p-4 justify-between flex-col">
       <div className="flex flex-col gap-9">
         <div>
           <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight lg:text-6xl text-center bg-clip-text text-transparent bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100 via-cyan-200 to-pink-500">

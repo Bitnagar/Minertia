@@ -16,7 +16,7 @@ export default function Home() {
           <a href="https://minertiaxyz.netlify.app">Get Started</a>
         </Button>
       </section>
-      <section className="h-fit bg-background grid content-around p-4 xl:grid-cols-2 xl:grid-rows-1 xl:items-center 2xl:justify-items-center 2xl:pr-28 ">
+      <section className="h-fit bg-black grid content-around p-4 xl:grid-cols-2 xl:grid-rows-1 xl:items-center 2xl:justify-items-center 2xl:pr-28 ">
         <div className="grid grid-cols-1 grid-rows-4 lg:grid-cols-2  lg:grid-rows-2 justify-items-center place-items-center gap-5 mt-10 mb-[2.5rem] 2xl:w-[30rem]">
           <Image
             id="img-1"
