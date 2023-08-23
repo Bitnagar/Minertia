@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 10% 100%;
+    --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
@@ -59,11 +59,44 @@
 }
 
 @layer components {
-  .red-gradient {
-    @apply [background:radial-gradient(_at_center_bottom,rgb(255,228,230),rgb(189,51,72),rgb(0,0,0)_)];
+  .bg-blue-gradient {
+    @apply bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-neutral-600 via-blue-700 to-cyan-400;
   }
 
   .red-text-gradient {
-    @apply bg-gradient-to-r from-rose-900 via-amber-100 to-rose-900;
+    @apply bg-gradient-to-r from-rose-900 via-amber-400 to-rose-900;
   }
+
+  .orange-text-gradient {
+    @apply bg-gradient-to-tl from-fuchsia-900 via-orange-500 to-indigo-500;
+  }
+
+  .purple-text-gradient {
+    @apply from-pink-900 via-violet-600 to-fuchsia-400;
+  }
+}
+
+.fadeIn {
+  animation: fade 0.5s ease-in 1 forwards;
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(70%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+
+.purple {
+  background-color: rgb(255, 255, 255);
+  background-image: radial-gradient(
+    at 0% 100%,
+    rgb(167, 139, 250) 0,
+    transparent 100%
+  );
 }

@@ -62,10 +62,6 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        blue: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,6 +76,12 @@ module.exports = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
+        },
+        "button-press": {
+          from: {
+            backgroundColor: " from-slate-700 via-purple-500 to-slate-700 ",
+          },
+          to: { backgroundColor: "bg-purple-500" },
         },
       },
       animation: {

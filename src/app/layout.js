@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="w-full h-full scroll-smooth">
       <body className={inter.className + " w-full h-full "}>
-        <div className="red-gradient">
+        <div className="purple">
           <Header />
           {children}
           <Toaster />
