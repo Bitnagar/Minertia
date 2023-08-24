@@ -100,3 +100,38 @@
     transparent 100%
   );
 }
+
+/* Stagger animation */
+.stagger-short {
+  animation: stagger 0.5s ease-in-out forwards;
+}
+
+.stagger-long {
+  animation: stagger 0.8s ease-in-out forwards;
+}
+
+@keyframes stagger {
+  0% {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.slide-in {
+  animation: slidein 0.2s ease-in-out forwards;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translatex(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0px);
+  }
+}

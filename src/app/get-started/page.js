@@ -2,9 +2,9 @@
 import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
+import { File } from "nft.storage";
 import { uploadArtToIpfs } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
-import { File } from "nft.storage";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { ButtonLoading } from "@/components/ui/ButtonLoading";
@@ -30,7 +30,7 @@ export default function Page() {
       toast({
         variant: "destructive",
         title: "Image generation failed.",
-        description: "Please provide an input larger than 3 character.",
+        description: "Please enter a prompt larger than 2 characters.",
       });
       return;
     }
@@ -92,7 +92,7 @@ export default function Page() {
           if (response) {
             toast({
               title: "NFT Minted.✅",
-              description: "Your NFT can be viewed in your OpenSea Account.",
+              description: "Check your OpenSea account for more details.",
             });
             setIsLoading(false);
           } else throw Error("Something Went Wrong.");
@@ -155,7 +155,7 @@ export default function Page() {
           <h1 className="scroll-m-20 text-2xl font-bold tracking-tight">
             Ready to mint?
           </h1>
-          <Button onClick={() => setWillMint(true)} className=" w-56 2xl:w-3/4">
+          <Button onClick={() => setWillMint(true)} className="w-56 2xl:w-3/4">
             MINT
           </Button>
           <Button onClick={() => setImageBlob("")} className="w-56 2xl:w-3/4">
@@ -175,7 +175,7 @@ export default function Page() {
             <Input
               placeholder="Type a name for your NFT."
               name="nft-name"
-              className="text-black mb-6 text-base font-medium h-10 2xl:w-[40rem]"
+              className="text-black mb-6 text-base font-medium h-10 2xl:w-[40rem] slide-in"
               onChange={(e) => setMintName(e.target.value)}
               value={mintName}
             />
@@ -184,7 +184,7 @@ export default function Page() {
             <Input
               placeholder="Type the description for your NFT."
               name="nft-desc"
-              className="text-black mb-6 text-base font-medium w-full h-10 2xl:w-[40rem]"
+              className="text-black mb-6 text-base font-medium w-full h-10 2xl:w-[40rem] slide-in"
               onChange={(e) => setMintDesc(e.target.value)}
               value={mintDesc}
             />
@@ -193,7 +193,7 @@ export default function Page() {
             <Input
               placeholder="Type your Wallet address."
               name="nft-wallet-address"
-              className="text-black mb-6 text-base font-medium w-full h-10 2xl:w-[40rem]"
+              className="text-black mb-6 text-base font-medium w-full h-10 2xl:w-[40rem] slide-in"
               onChange={(e) => setMintAdd(e.target.value)}
               value={mintAdd}
             />
