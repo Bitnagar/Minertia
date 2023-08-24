@@ -115,10 +115,10 @@ export default function Page() {
     }
   };
   return (
-    <section className=" flex flex-col lg:flex-row lg:gap-14 justify-center items-center w-full h-screen lg:justify-evenly p-8">
+    <section className=" flex flex-col justify-center items-center w-full h-screen  p-8 xl:flex-row xl:gap-40 ">
       {imageBlob ? (
         <Image
-          className="fadeIn 2xl:w-[30rem] rounded-xl"
+          className="fadeIn xl:w-[25rem] 2xl:w-[30rem] rounded-xl"
           src={imageBlob}
           alt={prompt}
           width={300}
@@ -126,21 +126,21 @@ export default function Page() {
         />
       ) : (
         <div className="flex flex-col justify-around items-center gap-5">
-          <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight text-center mb-6 2xl:text-5xl">
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight 2xl:leading-[5rem] text-center mb-6 2xl:text-6xl purple-text-gradient bg-clip-text text-transparent bg-gradient-to-tr">
             Type your prompt to see the magic!
           </h1>
           <Input
             type="email"
             placeholder="Type your prompt here"
             name="prompt"
-            className="text-black h-12 mb-6 text-base font-medium 2xl:w-[40rem]"
+            className="text-black h-12 mb-6 text-sm font-medium 2xl:w-[40rem]"
             onChange={(e) => setPrompt(e.target.value)}
           />
           <div className="flex items-center flex-col gap-4 w-full px-8">
             {isLoading ? (
               <ButtonLoading />
             ) : (
-              <Button className="w-56" onClick={generateArt}>
+              <Button className="w-56 mb-4" onClick={generateArt}>
                 GENERATE
               </Button>
             )}
@@ -148,37 +148,34 @@ export default function Page() {
         </div>
       )}
       {imageBlob && !willMint && (
-        <div className=" flex items-center flex-col gap-4 w-full 2xl:w-3/12 px-8 2xl:mt-0 2xl:p-0">
-          <h1 className="scroll-m-20 text-sm font-normal italic tracking-tight pb-4">
+        <div className=" flex items-center flex-col gap-4 w-full xl:w-fit 2xl:w-2/5">
+          <h1 className="scroll-m-20 text-sm font-normal italic tracking-tight pb-4 mt-3">
             {`"${prompt}"`}
           </h1>
-          <h1 className="scroll-m-20 text-2xl font-bold tracking-tight ">
+          <h1 className="scroll-m-20 text-2xl font-bold tracking-tight">
             Ready to mint?
           </h1>
-          <Button
-            onClick={() => setWillMint(true)}
-            className=" w-56 2xl:w-full"
-          >
+          <Button onClick={() => setWillMint(true)} className=" w-56 2xl:w-3/4">
             MINT
           </Button>
-          <Button onClick={() => setImageBlob("")} className="w-56 2xl:w-full">
+          <Button onClick={() => setImageBlob("")} className="w-56 2xl:w-3/4">
             GO BACK
           </Button>
         </div>
       )}
       {willMint && (
-        <div className="flex flex-col justify-center items-center w-full px-12">
-          <h1 className="scroll-m-20 text-sm font-normal italic tracking-tight pb-4">
+        <div className="flex flex-col justify-center items-center w-full lg:w-3/5 2xl:w-2/5">
+          <h1 className="scroll-m-20 text-sm font-normal italic tracking-tight pb-5 mt-3">
             {`"${prompt}"`}
           </h1>
-          <h1 className="scroll-m-20  text-sm font-bold tracking-tight self-start mb-1">
+          <h1 className="scroll-m-20  text-sm font-bold tracking-tight self-center mb-2">
             Please enter the following details:
           </h1>
           {mintInputs === 0 && (
             <Input
               placeholder="Type a name for your NFT."
               name="nft-name"
-              className="text-black mb-6 text-base font-medium w-full h-10"
+              className="text-black mb-6 text-base font-medium h-10 2xl:w-[40rem]"
               onChange={(e) => setMintName(e.target.value)}
               value={mintName}
             />
@@ -187,7 +184,7 @@ export default function Page() {
             <Input
               placeholder="Type the description for your NFT."
               name="nft-desc"
-              className="text-black mb-6 text-base font-medium w-full h-10"
+              className="text-black mb-6 text-base font-medium w-full h-10 2xl:w-[40rem]"
               onChange={(e) => setMintDesc(e.target.value)}
               value={mintDesc}
             />
@@ -196,7 +193,7 @@ export default function Page() {
             <Input
               placeholder="Type your Wallet address."
               name="nft-wallet-address"
-              className="text-black mb-6 text-base font-medium w-full h-10"
+              className="text-black mb-6 text-base font-medium w-full h-10 2xl:w-[40rem]"
               onChange={(e) => setMintAdd(e.target.value)}
               value={mintAdd}
             />
@@ -207,13 +204,13 @@ export default function Page() {
               onClick={() => {
                 setMintInputs((prev) => prev + 1);
               }}
-              className="w-56 mb-4"
+              className="w-56 mb-4 2xl:w-3/4"
             >
               NEXT →
             </Button>
           )}
           {mintInputs > 1 && !isLoading && (
-            <Button onClick={mintNft} className="w-56 mb-4">
+            <Button onClick={mintNft} className="w-56 mb-4 2xl:w-3/4">
               MINT NOW!
             </Button>
           )}
@@ -227,7 +224,7 @@ export default function Page() {
                 setMintInputs((prev) => (prev = prev - 1));
               }
             }}
-            className="w-56"
+            className="w-56 2xl:w-3/4"
           >
             ← GO BACK
           </Button>

@@ -18,7 +18,7 @@ export default function Home() {
         </Button>
       </section>
       <section className=" w-full min-h-screen flex flex-col gap-10 bg-background px-8 py-20 2xl:flex-row 2xl:justify-center 2xl:gap-20">
-        <div className="grid grid-cols-1 grid-rows-2 content-center place-items-center gap-4 lg:grid-cols-2 lg:w-fit lg:self-center">
+        <div className="grid grid-cols-1 grid-rows-2 content-center place-items-center gap-4 lg:grid-cols-2 lg:w-fit lg:self-center lg:ml-[50px]">
           <Image
             id="img-1"
             src={"/images/woman.jpeg"}
@@ -53,11 +53,11 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col justify-center items-start w-fit">
-          <h1 className="orange-text-gradient text-transparent bg-clip-text text-4xl font-extrabold tracking-tight leading-[3rem] lg:px-10 text-center 2xl:text-left mb-10 lg:text-5xl 2xl:w-[54rem]">
+          <h1 className="orange-text-gradient text-transparent bg-clip-text text-4xl font-extrabold tracking-tight leading-[3rem] lg:px-10 text-center 1xl:px-60 2xl:text-left mb-10 lg:text-5xl 2xl:w-[54rem] 2xl:px-10">
             Generate mindblowing Images and NFTs with the power of Stable
             Diffusion.
           </h1>
-          <p className="text-lg 2xl:text-xl leading-7 font-medium text-center sm:px-10">
+          <p className="text-lg 2xl:text-xl leading-7 font-medium text-center lg:self-center sm:px-10 2xl:self-start">
             Minertia uses Stable diffusion to make beautiful NFTs, with just one
             prompt.
           </p>

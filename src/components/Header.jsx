@@ -8,7 +8,7 @@ export default function Header() {
             Minertia
           </h1>
         </div>
-        <ul className="flex gap-10 [&>li]:font-bold [&>li]:text-sm  items-center 2xl:[&>li]:text-base">
+        <ul className="flex gap-4 xl:gap-10 [&>li]:font-bold [&>li]:text-sm  items-center 2xl:[&>li]:text-base">
           <li>
             <Link href="/" id="home">
               HOME
