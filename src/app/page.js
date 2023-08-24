@@ -14,7 +14,7 @@ export default function Home() {
           Generate NFTs and mint them on your favourite marketplace.
         </h4>
         <Button variant="custom">
-          <Link href="https://minertiaxyz.netlify.app">GET STARTED</Link>
+          <Link href="/get-started">GET STARTED</Link>
         </Button>
       </section>
       <section className=" w-full min-h-screen flex flex-col gap-10 bg-background px-8 py-20 2xl:flex-row 2xl:justify-center 2xl:gap-20">
@@ -74,7 +74,7 @@ export default function Home() {
               Connect your wallet, list your NFT, and start earning!
             </p>
             <Button>
-              <Link href="https://minertiaxyz.netlify.app">TRY NOW</Link>
+              <Link href="/get-started">TRY NOW</Link>
             </Button>
           </div>
         </div>
