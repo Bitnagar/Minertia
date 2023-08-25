@@ -58,6 +58,7 @@ export default function Page() {
       setImageBlob(url);
       setIsLoading(false);
     } catch (err) {
+      console.log(err);
       setIsLoading(false);
       toast({
         variant: "destructive",
@@ -98,6 +99,7 @@ export default function Page() {
           } else throw Error("Something Went Wrong.");
         }
       } catch (err) {
+        console.log(err);
         toast({
           variant: "destructive",
           title: `Invalid Address.`,
