@@ -26,7 +26,6 @@ export const uploadArtToIpfs = async (imageFile) => {
 
     return cleanupIPFS(store.data.image.href);
   } catch (err) {
-    console.log(err);
     toast({
       variant: "destructive",
       title: "IPFS failed.",
