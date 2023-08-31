@@ -61,8 +61,8 @@ export default function Page() {
       setIsLoading(false);
       toast({
         variant: "destructive",
-        title: "Something went wrong!",
-        description: "Something went wrong. Please Retry!",
+        title: "Oops! Rate Limit Exceeded.",
+        description: "Sorry! Please try again in a few minutes.",
       });
     }
   };
