@@ -37,7 +37,7 @@ export default function Page({ params }) {
         } else {
           toast({
             variant: "destructive",
-            title: "Something went Hugging Face API!",
+            title: "Something went wrong with Hugging Face API.",
             description: "Please try again after few minutes!",
           });
           return;

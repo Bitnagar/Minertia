@@ -30,7 +30,7 @@ export default function MintNFT({ img }) {
         if (imageURL) {
           // mint as an NFT on nftport
           const response = await axios.post(
-            `https://api.nftport.xyz/vy/urls`,
+            `https://api.nftport.xyz/v0/mints/easy/urls`,
             {
               file_url: imageURL,
               chain: "polygon",
